@@ -1,0 +1,9 @@
+// CLAVIER QUÉBÉCOIS
+default partial
+xkb_symbols "qc" {
+    include "ca(fr)"
+    name[Group1] = "Français (Québec)";
+
+    key <AB01>	{[         z,          Z, guillemotleft ]};
+    key <AB02>	{[         x,          X, guillemotright ]};
+};

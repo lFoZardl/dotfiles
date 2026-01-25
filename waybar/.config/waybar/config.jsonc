@@ -1,0 +1,33 @@
+{
+  "reload_style_on_change": true,
+  "toggle": true,
+  "layer": "top",
+  "start_hidden": true,
+  "position": "left",
+  "margin-top": 0,
+  "margin-bottom": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "spacing": 0,
+  "width": 32,
+  "include": ["~/.config/waybar/modules.json"],
+  "modules-left": [
+    "clock",
+    "power-profiles-daemon",
+    "cpu",
+    "hyprland/submap",
+    "hyprland/workspaces",
+    "hyprland/scratchpad"
+  ],
+  "modules-center": ["mpris", "privacy"],
+  "modules-right": [
+    "tray",
+    "network",
+    "bluetooth",
+    "pulseaudio#microphone",
+    "group/ddc_brightness",
+    "group/audio",
+    //"group/brightness",
+    "battery"
+  ]
+}

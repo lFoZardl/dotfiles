@@ -4,6 +4,8 @@ xkb_symbols "qc" {
     include "ca(fr)"
     name[Group1] = "Français (Québec)";
 
+    //key <AD08>	{[         i,          I, infinity ]};
+    key <AD08>	{[         i,          I, infinity ]};
     key <AB01>	{[         z,          Z, guillemotleft ]};
     key <AB02>	{[         x,          X, guillemotright ]};
 };

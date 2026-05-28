@@ -1,8 +1,8 @@
 set $ecran_1 DP-3
 set $ecran_2 DP-1
 
-set $monter_volume Mod4+KP_add
-set $baisser_volume Mod4+KP_subtract
+set $monter_volume Mod4+up
+set $baisser_volume Mod4+down
 
 bindsym --locked XF86AudioRaiseVolume exec
 bindsym --locked XF86AudioLowerVolume exec

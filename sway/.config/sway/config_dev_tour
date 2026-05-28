@@ -1,6 +1,12 @@
 set $ecran_1 DP-3
 set $ecran_2 DP-1
 
+set $monter_volume Mod4+KP_add
+set $baisser_volume Mod4+KP_subtract
+
+bindsym --locked XF86AudioRaiseVolume exec
+bindsym --locked XF86AudioLowerVolume exec
+
 output $ecran_1 resolution 1920x1080 position 0 0 scale 1
 output $ecran_2 mode 1920x1080@60Hz position 1920 0 scale 1
 

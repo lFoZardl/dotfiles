@@ -255,11 +255,10 @@ bar {
     # The default just shows the current date and time.
     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
-
     colors {
         #statusline #ffffff
-        #background #323232
-        #inactive_workspace #32323200 #32323200 #5c5c5c
+        background #00000066
+        inactive_workspace #000000dd #000000cc #aaaaaaff
     }
     height 30
 

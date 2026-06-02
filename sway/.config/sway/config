@@ -55,8 +55,8 @@ exec wl-paste --type image --watch cliphist store
 set $lock_cmd swaylock -f -c 000000
 
 exec swayidle -w \
-    timeout 300 '$lock_cmd' \
-    timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    timeout $lock1_temps '$lock_cmd' \
+    timeout $lock2_temps 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
     before-sleep '$lock_cmd'
 
 set $chose $(printf "\
@@ -230,11 +230,17 @@ bindsym $mod+r mode "resize"
     # Special keys to adjust brightness via brightnessctl
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+
     # Special key to take a screenshot with grim
-    # bindsym Print exec grim
-    bindsym Shift+Print exec grim -g "$(slurp)"
+    bindsym Shift+Print exec grim -g "$(slurp -d)"
     bindsym Print exec grim -g "$(slurp -d)" - | wl-copy
+
+    # couleur
+    bindsym Ctrl+Print exec grim -g "$(slurp -p -b 00000000)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
+
+    bindsym Shift+Scroll_Lock exec wooz --invert-scroll
     bindsym Shift+Pause exec wayscriber -a --no-resume-session
+
     #bindsym $mod+Shift+v exec cliphist list | fuzzel --dmenu --with-nth 2 | cliphist decode | wl-copy
     bindsym $mod+Shift+v exec ~/.config/sway/cliphist-fuzzel-img
 

@@ -4,8 +4,8 @@ set $ecran_2 DP-1
 set $monter_volume Mod4+up
 set $baisser_volume Mod4+down
 
-set $lock1_temps 300
-set $lock2_temps 600
+set $lock1_temps 900
+set $lock2_temps 960
 
 bindsym --locked XF86AudioRaiseVolume exec
 bindsym --locked XF86AudioLowerVolume exec

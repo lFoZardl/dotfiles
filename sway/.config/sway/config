@@ -15,7 +15,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term foot
 
 # Your preferred application launcher
 set $menu fuzzel --no-exit-on-keyboard-focus-loss
@@ -257,7 +257,7 @@ bar {
 
     colors {
         #statusline #ffffff
-        background #00000066
+        background #00000088
         inactive_workspace #000000dd #000000cc #aaaaaaff
     }
     height 30
